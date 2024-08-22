@@ -1,0 +1,68 @@
+@import '/vendor/filament/filament/resources/css/theme.css';
+
+@config 'tailwind.config.js';
+
+.reset-tailwinds, .reset-tailwinds * {
+	all: revert;
+}
+
+.fi-global-search-field {
+    @apply xl:min-w-96;
+}
+
+.details-appointments-repeater {
+
+    .grid.gap-4 {
+        @apply gap-1;
+    }
+
+    .fi-fo-repeater-item {
+        @apply relative;
+    }
+
+    .choices__inner {
+        @apply pe-[3.6rem];
+    }
+
+    .fi-fo-repeater-item {
+
+        @apply rounded-none first:rounded-t-md last:rounded-b-md pr-[2rem];
+
+        .fi-fo-component-ctn {
+            @apply gap-1;
+
+            .fi-input-wrp {
+                @apply rounded-none;
+            }
+
+            > div:first-child .fi-input-wrp {
+                @apply md:rounded-l-md;
+            }
+
+            > div:last-child .fi-input-wrp {
+                @apply md:rounded-r-md;
+            }
+        }
+
+        &-header {
+            @apply absolute right-[-0.5rem] top-[0.2rem];
+        }
+
+        &-content {
+            @apply !border-none p-2;
+        }
+    }
+}
+
+.details-appointments-row {
+
+    @apply rounded-none first:rounded-t-md last:rounded-b-md min-h-28;
+
+    .fi-ta-actions {
+        @apply sm:absolute lg:left-[7rem] top-[4.2rem] left-11;
+    }
+
+    .py-4 {
+        @apply !py-2;
+    }
+}
